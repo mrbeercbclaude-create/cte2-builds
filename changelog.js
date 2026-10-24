@@ -1,5 +1,7 @@
 // Newest first. build = character name, or 'ทั้งหมด' for site-wide changes.
 window.CHANGELOG = [
+  { date: '2026-10-25', build: 'ตัวที่ 3', text: 'สร้าง build <b>Rime Reaver Lich</b> v1.0 (Cryolancer + Minstrel · spear) — เน้นเคลียร์ไว · ยังไม่เทสในเกม' },
+  { date: '2026-10-25', build: 'ทั้งหมด', text: 'หน้า build มี section ใหม่: จุดเด่น/จุดอ่อน · แท็บ Variant (เคลียร์ / บอส / ช่วงเลเวล) · รอบเล่น · กราฟเทียบดาเมจจาก sim · checklist ทดสอบก่อนลงทุน · ปุ่มสกิล' },
   { date: '2026-10-24', build: 'Mika', text: 'สร้าง build <b>Undead Summoner</b> v1.0 (Warlock + Minstrel · Necromancer) + ตารางของในกระเป๋าที่ Mika ใส่ได้ตามเลเวล' },
   { date: '2026-10-24', build: 'Raptor', text: 'v1.1 · เพิ่มโน้ต: บอส armor สูง ให้ Shred ก่อน · เลเวล gear ต้องไม่เกินเลเวลตัว' },
   { date: '2026-10-24', build: 'ทั้งหมด', text: 'เว็บรองรับหลาย build · หน้าแรกเป็นหน้ารวม · talent ที่เพิ่มจำนวน summon แสดงเป็น +1 (เดิมขึ้น +1%)' },

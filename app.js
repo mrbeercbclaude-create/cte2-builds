@@ -82,6 +82,72 @@
     <div class="grid4">${B.summary.minis.map(m => `<div class="mini"><div class="k">${esc(m[0])}</div><div class="v">${esc(m[1])}</div><div class="d">${m[2]}</div></div>`).join('')}</div>
     ${(B.summary.notes || []).map(n => `<div class="note ${n[0]}">${n[1]}</div>`).join('')}`);
 
+  // strengths / weaknesses (optional)
+  if (B.strengths) {
+    const li = a => a.map(x => `<li>${x}</li>`).join('');
+    add('strengths', 'จุดเด่น / จุดอ่อน', `<h2>จุดเด่น / จุดอ่อน</h2>
+      <div class="sw"><div class="pros"><div class="swh">จุดเด่น</div><ul>${li(B.strengths.pros)}</ul></div>
+      <div class="cons"><div class="swh">จุดอ่อน</div><ul>${li(B.strengths.cons)}</ul></div></div>`);
+  }
+
+  // variants as tabs (optional): [{name, sub, items:[...], note}]
+  if (B.variants) {
+    const sec = add('variants', 'Variant', `<h2>Variant <span class="pill">สลับตามสถานการณ์</span></h2>
+      <div class="tabs vtabs">${B.variants.map((v, i) => `<button data-v="${i}"${i ? '' : ' class="on"'}>${esc(v.name)}</button>`).join('')}</div>
+      ${B.variants.map((v, i) => `<div class="vpane" data-v="${i}"${i ? ' hidden' : ''}><p class="small">${v.sub || ''}</p>
+        <ul class="vlist">${v.items.map(x => `<li>${x}</li>`).join('')}</ul>${v.note ? `<div class="note">${v.note}</div>` : ''}</div>`).join('')}`);
+    sec.querySelectorAll('.vtabs button').forEach(b => b.addEventListener('click', () => {
+      sec.querySelectorAll('.vtabs button').forEach(x => x.classList.toggle('on', x === b));
+      sec.querySelectorAll('.vpane').forEach(p => { p.hidden = p.dataset.v !== b.dataset.v; });
+    }));
+  }
+
+  // combo rotation (optional)
+  if (B.combo) {
+    const sicon = sid => { for (const sc of B.schools || []) { const n = sc.nodes.find(x => x.id === sid); if (n && n.i) return n.i; } return null; };
+    const ct = B.combo.title || 'คอมโบ';
+    add('combo', ct, `<h2>${esc(ct)} ${B.combo.pill ? `<span class="pill">${esc(B.combo.pill)}</span>` : ''}</h2>
+      <p class="small">${B.combo.intro || ''}</p>
+      <div class="combo">${B.combo.steps.map((s, i) => `${i ? '<div class="carrow" aria-hidden="true">›</div>' : ''}<div class="cstep${s.main ? ' main' : ''}">
+        <div class="cr">${esc(s.role)}</div>
+        <div class="ci">${sicon(s.id) ? `<img src="icons/${sicon(s.id)}" alt="">` : ''}</div>
+        <b>${esc(s.name)}</b><span>${s.desc}</span>
+        ${s.share != null ? `<div class="share"><i style="width:${s.share}%"></i></div><em>${s.share}% ของดาเมจบอส</em>` : ''}</div>`).join('')}</div>
+      ${(B.combo.notes || []).map(n => `<div class="note ${n[0]}">${n[1]}</div>`).join('')}`);
+  }
+
+  // sim comparison (optional): rows {name, sub, boss, clear, me}
+  if (B.sim) {
+    const S = B.sim;
+    const fmt = v => v >= 1e6 ? (v / 1e6).toFixed(2) + 'M' : Math.round(v / 1e3) + 'k';
+    const col = (k, label) => {
+      const rows = S.rows.filter(r => r[k] != null).sort((a, b) => b[k] - a[k]), mx = rows[0][k];
+      return `<div class="simcol"><div class="simh">${label}</div>${rows.map(r => `<div class="srow${r.me ? ' me' : ''}${r.ref ? ' ref' : ''}">
+        <span class="snm">${esc(r.name)}<i>${esc(r.sub || '')}</i></span><span class="sbar"><i style="width:${(r[k] / mx * 100).toFixed(1)}%"></i></span><b>${fmt(r[k])}</b></div>`).join('')}</div>`;
+    };
+    add('sim', 'ทำไม build นี้', `<h2>ทำไม build นี้ <span class="pill">${esc(S.pill || 'จำลองดาเมจ')}</span></h2>
+      <p class="small">${S.intro || ''}</p>
+      <div class="simgrid">${col('boss', 'ตีบอส (DPS ตัวเดียว)')}${col('clear', 'เคลียร์แมพ (ดาเมจรวมทั้งกลุ่ม)')}</div>
+      ${(S.notes || []).map(n => `<div class="note ${n[0]}">${n[1]}</div>`).join('')}`);
+  }
+
+  // test-before-you-invest checklist (optional) — ticks stay in this browser only
+  if (B.checklist) {
+    const key = 'cte2-check-' + id;
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch (e) { saved = {}; }
+    const sec = add('check', 'ทดสอบก่อน', `<h2>ทดสอบก่อนลงทุน <span class="pill" id="ckCount"></span></h2>
+      <p class="small">${B.checklist.intro || ''}</p>
+      <ul class="check">${B.checklist.items.map((t, i) => `<li><label><input type="checkbox" data-i="${i}"${saved[i] ? ' checked' : ''}><span>${t}</span></label></li>`).join('')}</ul>`);
+    const upd = () => { const bx = [...sec.querySelectorAll('input')]; document.getElementById('ckCount').textContent = `${bx.filter(b => b.checked).length} / ${bx.length}`; };
+    sec.addEventListener('change', e => {
+      saved[e.target.dataset.i] = e.target.checked;
+      try { localStorage.setItem(key, JSON.stringify(saved)); } catch (er) { /* private window: ticks just won't persist */ }
+      upd();
+    });
+    upd();
+  }
+
   // stash (optional)
   if (B.stash) {
     add('stash', 'ของในกระเป๋า', `<h2>ของที่มีอยู่แล้ว → ใช้กับ ${esc(B.char)} <span class="pill">${esc(B.stash.when)}</span></h2>
@@ -305,7 +371,9 @@
     <h3>Jewels</h3><ul class="chips">${G.jewels.map(x => `<li>${x}</li>`).join('')}</ul>
     ${G.html || ''}`);
 
-  add('howto', 'วิธีเล่น', `<h2>วิธีเล่น</h2><ol class="steps">${B.howto.map(x => `<li>${x}</li>`).join('')}</ol>`);
+  add('howto', 'วิธีเล่น', `<h2>วิธีเล่น</h2>
+    ${B.binds ? `<h3>ปุ่มสกิลที่แนะนำ</h3><div class="binds">${B.binds.map(k => `<div class="bind"><kbd>${esc(k[0])}</kbd><b>${esc(k[1])}</b><span>${esc(k[2] || '')}</span></div>`).join('')}</div><h3>ลำดับ</h3>` : ''}
+    <ol class="steps">${B.howto.map(x => `<li>${x}</li>`).join('')}</ol>`);
   add('faq', 'ควรรู้', `<h2>ควรรู้</h2>${B.faq.map((f, i) => `<details${f[2] ? ' open' : ''}><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('')}`);
   const mine = (window.CHANGELOG || []).filter(c => c.build === B.char || c.build === 'ทั้งหมด');
   add('changes', 'อัปเดต', `<h2>ประวัติแก้ไข <span class="pill">v${esc(B.version)}</span></h2>
