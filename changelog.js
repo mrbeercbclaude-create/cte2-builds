@@ -1,5 +1,6 @@
 // Newest first. build = character name, or 'ทั้งหมด' for site-wide changes.
 window.CHANGELOG = [
+  { date: '2026-10-25', build: 'ตัวที่ 3', text: 'v1.3 · แก้ลำดับแต้มสกิล: เกมล็อกเลเวลสกิลตามเลเวลตัว (ต้องมากกว่า req + เลเวลสกิล) → Rime Reaver ขึ้น +1 ต่อเลเวล เต็มราว Lv 50 · แต้มที่เหลือลง March → Valor → Grasp' },
   { date: '2026-10-25', build: 'ตัวที่ 3', text: 'v1.2 · ลำดับอัพแต้มสกิลหลัง Lv 30 (Rime → March → Valor → Grasp → Banner) + ลำดับ passive · สกิลที่อัพเกิน 1 แล้วเปลือง: Glacial Dash · Song of Vigor · Frostbite Thrust หลัง Lv 30 · STR = ครึ่งเลเวล gear' },
   { date: '2026-10-25', build: 'ตัวที่ 3', text: 'v1.1 · Ascendancy <b>Lich → Trickster</b> (แก้ sim: Profane Explosion ต้องมี curse) — บอส 191k → 220k · เคลียร์ 1.76M → 1.81M · talent tree เดิม · กราฟเทียบใหม่จากอันดับทั้งเกม' },
   { date: '2026-10-25', build: 'ตัวที่ 3', text: 'สร้าง build <b>Rime Reaver Lich</b> v1.0 (Cryolancer + Minstrel · spear) — เน้นเคลียร์ไว · ยังไม่เทสในเกม' },
