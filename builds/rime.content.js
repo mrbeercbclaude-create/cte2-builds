@@ -1,5 +1,5 @@
 (window.BUILDS = window.BUILDS || {}).rime = Object.assign(window.BUILDS.rime || {}, {
-  char: 'ตัวที่ 3', title: 'Rime Reaver Trickster', version: '1.1', updated: '2026-10-25', status: 'ยังไม่สร้างตัว · ยังไม่เทส',
+  char: 'ตัวที่ 3', title: 'Rime Reaver Trickster', version: '1.2', updated: '2026-10-25', status: 'Lv 31 · เพิ่งได้ Rime Reaver · ยังไม่เทส',
   tags: [['Clear speed', 'gold'], ['Cold'], ['Spear'], ['Melee'], ['Trickster', 'gold'], ['ยังไม่เทสในเกม', 'red']],
   sub: 'หมุนตัวยิงเม็ดน้ำแข็งทะลุรอบทิศ 3 รอบต่อการกด · ศัตรูที่ติด <b>Snow-Tracked</b> ทำให้เม็ดแตกเป็นเศษอีก 8 เม็ด · Trickster เพิ่มดาเมจวงกว้าง 15% MORE + ฟื้น energy / HP ทุก hit · เน้นเคลียร์แมพไว บอสพอไหว',
   meta: [['คลาส', 'Cryolancer + Minstrel'], ['Ascendancy', 'Trickster'], ['จุดเริ่ม Talent', 'Warrior (The Axe)'], ['อาวุธ', 'Spear (2 มือ)']],
@@ -102,10 +102,13 @@
   },
   stats: {
     cols: [['dex', 'Energy (= ดาเมจ Rime Reaver) · Dodge', 'ลงหลัก'], ['str', 'HP · Armor', 'แค่ถึง req spear / brigandine'], ['int', 'Mana · Magic Shield', 'ไม่ลง']],
-    steps: ['STR ให้ถึง req ของ spear + brigandine', 'ที่เหลือ DEX ทั้งหมด'],
+    steps: ['STR ให้ถึง req ของ spear + brigandine = <b>ครึ่งหนึ่งของเลเวล gear</b> (gear Lv 31 → STR 16)', 'ที่เหลือ DEX ทั้งหมด · ได้ 1 แต้ม / เลเวล → ทุก 2 เลเวล: STR 1 · DEX ที่เหลือ'],
     html: '<p class="small">ดาเมจ Rime Reaver = weapon damage × 1.3 + <b>Energy × 0.13</b> (ส่วน energy สูงสุด 2 เท่าของส่วนอาวุธ · ไฟล์ <code>rime_reaver</code> value calc) · Icy Killer เพิ่ม Cold Damage ตาม % Energy ด้วย</p>',
   },
   dont: [
+    'อัพ <b>Frostbite Thrust</b> เพิ่มหลัง Lv 30 — เลิกใช้แล้ว',
+    'อัพ <b>Glacial Dash</b> / <b>Song of Vigor</b> เกิน 1 — เลเวลไม่เพิ่ม Snow-Track / cooldown / ของที่เราใช้',
+    'อัพ <b>Tailwind Sweep</b> / <b>Winter\'s Grasp</b> / <b>Banner</b> ก่อน Rime Reaver + เพลง เต็ม',
     '<b>Blood Mage</b> — Energy −100% (Rime Reaver ใช้ energy)',
     'node <b>Critical</b> ทุกแบบ — Steady Hand ตัด crit damage −100% แล้ว',
     'node <b>Physical</b> — Elemental Purity ตัด Physical −100% (ดาเมจเราเป็น Cold ล้วน)',
@@ -118,7 +121,7 @@
     ['8–9', 'Epilogue · บอสธาตุ 4 ตัว', 'DEX → <b>Trickery</b><div class="small">Dodge +12% · Magic Shield +12% · แปลง dodge ↔ magic shield</div>'],
   ],
   ascNote: 'แต้ม ascendancy แชร์ทุกตัวละคร (ได้จากเควส) แต่เลือก node แยกต่อตัว · Total Frenzy เป็นตัวเดียวที่เพิ่มดาเมจ อีก 3 ตัวเพื่อ energy / ความเร็ว / ความรอด · ทางเลือก: Elementalist ตีบอสแรงกว่า ~20% (Elemental Penetration 18) แต่เคลียร์เบากว่า ~7%',
-  skillNote: 'P = Passive ในต้นไม้คลาส · ลำดับ = แต้มสกิล (1 / เลเวล) · Frostbite Thrust / Tailwind Sweep ใช้ช่วงแรก ใส่ไม่ต้องเยอะ · <b>Lv 30 เทแต้มลง Rime Reaver ให้เต็ม 20 ก่อน</b> · Hymn เปิดได้ทีละอัน (Vigor → Valor) แต่ Rallying March ไม่ใช่ Hymn เปิดคู่ได้',
+  skillNote: 'P = Passive ในต้นไม้คลาส · แต้มสกิล 1 / เลเวล (Lv 100 = 100 + โบนัสเควส 10) · แต้ม Passive แยกกอง <b>0.5 / เลเวล</b> (Lv 100 = 50 + โบนัส 10) · Hymn เปิดได้ทีละอัน (Vigor → Valor) แต่ Rallying March ไม่ใช่ Hymn เปิดคู่ได้<h3>หลัง Lv 30: ลำดับอัพแต้มสกิล</h3><ol class="steps"><li><b>Rime Reaver</b> → 20 (ทุกแต้มจนเต็ม)</li><li><b>Rallying March</b> → 12 (Total Damage 30 → 60)</li><li><b>Song of Valor</b> → 12 (Total Damage 8 → 16)</li><li><b>Winter\'s Grasp</b> → 20 (รัศมีดูด +2% → +32%)</li><li><b>Banner of the Piercing Gale</b> → 12 (บอส)</li><li>เหลือ: Tailwind Sweep → 5</li></ol><p class="small">แต้มที่ต้องใช้รวม ~82 · มีถึง Lv 100 = 100+ → ไม่ขาด แค่ต้องลงให้ถูกลำดับ</p><h3>Passive: ลำดับ</h3><ol class="steps"><li><b>p_cdr</b> (Skill Speed) → 8</li><li><b>p_inc_aoe</b> (Area) → 8</li><li><b>p_ele_spear_damage_cry</b> → 8</li><li>เหลือ ~36 แต้ม: sim ไม่เห็นดาเมจเพิ่ม → ลงความอึด/energy เช่น <b>Dodge gained as Energy</b> (energy = ดาเมจ Rime Reaver · sim ไม่ได้นับ dodge) · <b>Energy Regen</b> — ยังไม่ได้วัด</li></ol>',
   gems: {
     socket: [['อาวุธ', 'Sapphire', 'Cold Damage +14%', '(ระดับสูงสุด)'], ['เกราะ', 'Azurite', 'Energy +21% (= ดาเมจ)', 'หรือ Opal = Health ถ้าตายบ่อย'], ['แหวน / สร้อย', 'Emerald', 'Skill Speed +21% (กดถี่ขึ้น)', 'หรือ Sapphire = Elemental Resistance']],
     support: [
