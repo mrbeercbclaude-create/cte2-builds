@@ -1,8 +1,8 @@
 (window.BUILDS = window.BUILDS || {}).rime = Object.assign(window.BUILDS.rime || {}, {
-  char: 'ตัวที่ 3', title: 'Rime Reaver Lich', version: '1.0', updated: '2026-10-25', status: 'ยังไม่สร้างตัว · ยังไม่เทส',
-  tags: [['Clear speed', 'gold'], ['Cold'], ['Spear'], ['Melee'], ['Lich', 'gold'], ['ยังไม่เทสในเกม', 'red']],
-  sub: 'หมุนตัวยิงเม็ดน้ำแข็งทะลุรอบทิศ 3 รอบต่อการกด · ศัตรูที่ติด <b>Snow-Tracked</b> ทำให้เม็ดแตกเป็นเศษอีก 8 เม็ด · ศัตรูตายแล้ว Lich ระเบิด Profane Explosion ต่อ · เน้นเคลียร์แมพไว บอสพอไหว',
-  meta: [['คลาส', 'Cryolancer + Minstrel'], ['Ascendancy', 'Lich'], ['จุดเริ่ม Talent', 'Warrior (The Axe)'], ['อาวุธ', 'Spear (2 มือ)']],
+  char: 'ตัวที่ 3', title: 'Rime Reaver Trickster', version: '1.1', updated: '2026-10-25', status: 'ยังไม่สร้างตัว · ยังไม่เทส',
+  tags: [['Clear speed', 'gold'], ['Cold'], ['Spear'], ['Melee'], ['Trickster', 'gold'], ['ยังไม่เทสในเกม', 'red']],
+  sub: 'หมุนตัวยิงเม็ดน้ำแข็งทะลุรอบทิศ 3 รอบต่อการกด · ศัตรูที่ติด <b>Snow-Tracked</b> ทำให้เม็ดแตกเป็นเศษอีก 8 เม็ด · Trickster เพิ่มดาเมจวงกว้าง 15% MORE + ฟื้น energy / HP ทุก hit · เน้นเคลียร์แมพไว บอสพอไหว',
+  meta: [['คลาส', 'Cryolancer + Minstrel'], ['Ascendancy', 'Trickster'], ['จุดเริ่ม Talent', 'Warrior (The Axe)'], ['อาวุธ', 'Spear (2 มือ)']],
   summary: {
     minis: [
       ['สกิลหลัก', 'Rime Reaver', 'ปลดล็อก Lv 30 · ไม่มี cooldown · ยิง 8 เม็ด × 3 รอบ'],
@@ -23,7 +23,7 @@
       'ไม่ซ้ำโชกุน: ไม่ใช้ Chronomancer เลย (ทั้งสกิลและ passive)',
     ],
     cons: [
-      '<b>ตีบอสอ่อน</b> — ~155–190k ใน sim เทียบ Zap ของโชกุน ~360k · เม็ดยิงรอบทิศ บอสตัวเดียวโดนแค่บางเม็ด',
+      '<b>ตีบอสอ่อน</b> — ~180–220k ใน sim เทียบ Zap ของโชกุน ~360k · เม็ดยิงรอบทิศ บอสตัวเดียวโดนแค่บางเม็ด',
       'สกิลหลักมาตอน Lv 30 — ช่วงแรกใช้ Frostbite Thrust / Tailwind Sweep',
       'Tree เน้นดาเมจ HP ต่ำ (~2,700 ที่ Lv 100 ใน sim) และต้องเข้าไปประชิด',
       'Support 5 อันคูณค่า energy (~×4) · ช่วงแรกอาจต้องเปิด Song of Vigor',
@@ -41,29 +41,28 @@
   },
   sim: {
     pill: 'Lv 100 · จำลองจากไฟล์เกม',
-    intro: 'Rime Reaver + Lich + spear กับคลาสที่ 2 แต่ละแบบ · แต่ละแถวหา talent tree 101 แต้มที่ดีที่สุดใหม่ทั้งหมด · บอส = เป้าเดียว resist 50% · เคลียร์ = มอน 10 ตัว resist 10% · ไม่นับ Chronomancer',
+    intro: 'จัดอันดับทุกสกิลในเกม (858 แบบ) หลังแก้บั๊ก sim ทั้งหมด · แต่ละแถวหา talent tree 101 แต้มที่ดีที่สุดของโหมดนั้น · บอส = เป้าเดียว resist 50% · เคลียร์ = มอน 10 ตัว resist 10% · คลาสที่ 2 ไม่ใช้ Chronomancer ยกเว้นแถวของโชกุน',
     rows: [
-      { name: 'Minstrel', sub: 'ที่เลือก · ดีทั้งสองแบบ', boss: 191e3, clear: 1757e3, me: true },
-      { name: 'Warlock', sub: 'curse → Profane 100%', boss: 140e3, clear: 1810e3 },
-      { name: 'Brawler', sub: 'passive เท่านั้น', boss: 169e3, clear: 1639e3 },
-      { name: 'Shaman', sub: 'Elemental Pen passive', boss: 189e3, clear: 1581e3 },
-      { name: 'Hunter', sub: '', boss: 152e3, clear: 1463e3 },
-      { name: 'Sorcerer', sub: '', boss: 146e3, clear: 1373e3 },
+      { name: 'Rime Reaver · Trickster', sub: 'ที่เลือก', boss: 220e3, clear: 1808e3, me: true },
+      { name: 'Rime Reaver · Lich', sub: 'v1.0 เดิม', boss: 191e3, clear: 1757e3 },
+      { name: 'Rime Reaver · Elementalist', sub: 'บอสดีกว่า เคลียร์เบากว่า', boss: 263e3, clear: 1682e3 },
+      { name: 'Soul Siphon', sub: 'Sanguimancer · staff', boss: 120e3, clear: 1832e3 },
+      { name: 'Thorn Bush', sub: 'Shaman · Gladiator · staff', boss: 450e3, clear: 1131e3 },
       { name: 'โชกุน: Zap', sub: 'Chronomancer · อ้างอิง', boss: 361e3, clear: 1034e3, ref: true },
     ],
     notes: [
-      ['', 'Warlock เคลียร์มากกว่า 3% (มี curse → ศัตรูตาย = ระเบิด 100%) แต่ตีบอสเบากว่า 27% และต้องกด curse เพิ่ม · Minstrel ได้ Rallying March + Song of Valor ที่ sim ยังไม่นับด้วย'],
+      ['', 'เคลียร์: Rime Reaver Trickster อยู่กลุ่มบนสุดของเกม (ห่างอันดับ 1 ไม่ถึง 5% ซึ่งเล็กกว่าความคลาดเคลื่อนของ sim) และดีกว่า Soul Siphon มากตอนตีบอส · Trickster ชนะ Lich ทั้งบอสและเคลียร์ เพราะ Profane Explosion ของ Lich ระเบิดแน่แค่กับศัตรูติด curse'],
       ['warn', 'ยังไม่นับ: การป้องกัน · ailment · crit จาก gear · เศษน้ำแข็งจาก Snow-Track · บัฟเพลง · บอส sim ให้โดน 3 เม็ด ของจริงอาจน้อยกว่า · เลขของโชกุนมาจากรอบจัดอันดับเดียวกัน (คนละ ascendancy)'],
     ],
   },
   variants: [
-    { name: 'เคลียร์แมพ', sub: 'ตั้งค่าหลัก · tree ในหน้านี้ปรับมาเพื่อเคลียร์ (1.76M)', items: [
+    { name: 'เคลียร์แมพ', sub: 'ตั้งค่าหลัก · tree ในหน้านี้ปรับมาเพื่อเคลียร์ (1.81M)', items: [
       'Support Rime Reaver: <b>Melee Damage · Cold Damage · Expanded Area · Cold Penetration · Mageblade</b>',
       'ธง: <b>Banner of the Piercing Gale</b> หรือไม่ปักก็ได้ (เดินเร็วกว่า)',
       'Hymn: <b>Song of Valor</b> + <b>Rallying March</b>',
       'วิ่งด้วย Glacial Dash เข้ากลุ่ม → Rime Reaver 1–2 ครั้ง → ไปกลุ่มถัดไป',
     ] },
-    { name: 'ตีบอส', sub: 'tree เดิม ~155k · ถ้าล้าง tree เป็นแบบตีบอส ~191k', items: [
+    { name: 'ตีบอส', sub: 'tree เดิม ~178k · ถ้าล้าง tree เป็นแบบตีบอส ~220k', items: [
       'สลับ Expanded Area → <b>Area Focus</b>',
       'ปัก <b>Banner of the Piercing Gale</b> ใต้บอสก่อน (ลด Armor + Cold Resistance)',
       '<b>Glacial Dash</b> ใส่บอส = Snow-Tracked 3 stack → เม็ดที่โดนบอสแตกเป็นเศษ',
@@ -86,7 +85,7 @@
       'Tailwind Sweep ก่อน → เม็ดที่โดนมอน<b>แตกเป็นเศษ</b>ยิงต่อ (เห็นเม็ดเล็กพุ่งออกจากตัวมอน)',
       'ใส่ support 5 อันแล้ว<b>กดรัว 10 วิ energy ไม่หมด</b> · ถ้าหมด เปิด Song of Vigor / ใส่ Energy Regen Augment',
       'บอส: ยืนชิดแล้วนับตัวเลขดาเมจที่เด้งต่อรอบ (sim คิดว่าโดน 3 เม็ด + วงรอบตัว)',
-      'ascendancy 8–9: มอนตายแล้ว<b>ระเบิด</b>ต่อ (Profane Explosion 25% ต่อการฆ่า)',
+      'ascendancy 4–5 (Resourceful Thief): กดรัวแล้ว <b>energy / HP เด้งขึ้นทุก hit</b>',
     ],
   },
   equipment: {
@@ -113,12 +112,12 @@
     'Keystone สาย <b>Mana</b> — Icy Killer ลด Mana 25% MORE',
   ],
   ascTable: [
-    ['1–3', 'Act II · Defenders of the Nether II', 'Lich → INT → <b>Dark Power</b><div class="small">Cold 8% MORE · Chaos 8% MORE · AoE +10%</div>'],
-    ['4–5', 'Act III · Slippery Swimmer', 'INT → <b>Artic Armor</b><div class="small">Cold 15% MORE · Physical Resistance +8</div>'],
-    ['6–7', 'Act V · They Knew You Were Coming', 'INT → <b>Chaotic Disposition</b><div class="small">Chaos 15% MORE · Chaos Resistance +35 (ทางผ่านไป Profane Explosion)</div>'],
-    ['8–9', 'Epilogue · บอสธาตุ 4 ตัว', 'INT → <b>Profane Explosion</b><div class="small">ฆ่าศัตรู 25% ระเบิด · ศัตรูติด curse 100% · Curse duration +50%</div>'],
+    ['1–3', 'Act II · Defenders of the Nether II', 'Trickster → INT → <b>Total Frenzy</b><div class="small">Area Damage 15% MORE · AoE +20% · Area cast time +30%</div>'],
+    ['4–5', 'Act III · Slippery Swimmer', 'DEX → <b>Resourceful Thief</b><div class="small">+2 Health / Mana / Energy / Magic Shield ต่อ hit — เม็ดทะลุโดนหลายตัว = energy ไม่หมด</div>'],
+    ['6–7', 'Act V · They Knew You Were Coming', 'DEX → <b>Master of Phasing</b><div class="small">Move Speed +15% · กัน Slow · Knockback resist 50% — วิ่งระหว่างกลุ่มเร็วขึ้น</div>'],
+    ['8–9', 'Epilogue · บอสธาตุ 4 ตัว', 'DEX → <b>Trickery</b><div class="small">Dodge +12% · Magic Shield +12% · แปลง dodge ↔ magic shield</div>'],
   ],
-  ascNote: 'แต้ม ascendancy แชร์ทุกตัวละคร (ได้จากเควส) แต่เลือก node แยกต่อตัว · Lich แลกบอสเพื่อเคลียร์: ถ้าอยากได้บอสมากกว่า Elementalist ตีบอสแรงกว่า ~28% (มี Elemental Penetration 18) แต่เคลียร์เบากว่า',
+  ascNote: 'แต้ม ascendancy แชร์ทุกตัวละคร (ได้จากเควส) แต่เลือก node แยกต่อตัว · Total Frenzy เป็นตัวเดียวที่เพิ่มดาเมจ อีก 3 ตัวเพื่อ energy / ความเร็ว / ความรอด · ทางเลือก: Elementalist ตีบอสแรงกว่า ~20% (Elemental Penetration 18) แต่เคลียร์เบากว่า ~7%',
   skillNote: 'P = Passive ในต้นไม้คลาส · ลำดับ = แต้มสกิล (1 / เลเวล) · Frostbite Thrust / Tailwind Sweep ใช้ช่วงแรก ใส่ไม่ต้องเยอะ · <b>Lv 30 เทแต้มลง Rime Reaver ให้เต็ม 20 ก่อน</b> · Hymn เปิดได้ทีละอัน (Vigor → Valor) แต่ Rallying March ไม่ใช่ Hymn เปิดคู่ได้',
   gems: {
     socket: [['อาวุธ', 'Sapphire', 'Cold Damage +14%', '(ระดับสูงสุด)'], ['เกราะ', 'Azurite', 'Energy +21% (= ดาเมจ)', 'หรือ Opal = Health ถ้าตายบ่อย'], ['แหวน / สร้อย', 'Emerald', 'Skill Speed +21% (กดถี่ขึ้น)', 'หรือ Sapphire = Elemental Resistance']],
@@ -142,11 +141,11 @@
     'เปิด <b>Song of Valor</b> + <b>Rallying March</b> ค้างไว้',
     '<b>Glacial Dash</b> เข้ากลางกลุ่ม (ติด Snow-Tracked 3 stack ตัวที่โดน)',
     'กลุ่มกระจาย: <b>Tailwind Sweep</b> แล้ว <b>Winter\'s Grasp</b> ดึงเข้ามา',
-    '<b>Rime Reaver</b> 1–2 ครั้ง — เม็ดทะลุ + แตกเป็นเศษใส่ตัวที่ติด Snow-Track · ตัวที่ตายระเบิด Profane Explosion ต่อ',
+    '<b>Rime Reaver</b> 1–2 ครั้ง — เม็ดทะลุ + แตกเป็นเศษใส่ตัวที่ติด Snow-Track',
     'บอส: ปัก <b>Banner of the Piercing Gale</b> → Glacial Dash ใส่บอส → ยืนชิดกด Rime Reaver รัว · Dash ซ้ำทุก ~3 วิ ให้มี Snow-Track',
   ],
   faq: [
-    ['ทำไมเลือก Lich ไม่ใช่ Elementalist', 'Lich เคลียร์แรงกว่า (Profane Explosion ตอนฆ่า) · Elementalist ตีบอสแรงกว่า ~28% เพราะมี Elemental Penetration 18 · Beer เลือกเคลียร์ไว', true],
+    ['ทำไมเปลี่ยนจาก Lich เป็น Trickster (v1.1)', 'หลังแก้บั๊ก sim: Profane Explosion ของ Lich ระเบิดแน่ 100% เฉพาะศัตรูติด curse (ไม่ติด = 25%) · Trickster ชนะ Lich ทั้งบอส (220k vs 191k) และเคลียร์ (1.81M vs 1.76M) · talent tree เหมือนเดิมทุก node เปลี่ยนแค่ ascendancy', true],
     ['ไม่ใช้ Chronomancer เลยจริงไหม', 'จริง — ทั้งสกิลและ passive · คลาสที่ 2 คือ Minstrel (ใน sim Minstrel ดีสุดเมื่อรวมบอส + เคลียร์)'],
     ['ตัวเลขในเว็บเชื่อได้แค่ไหน', 'ใช้เทียบกันเองเท่านั้น · sim ตัวนี้เพิ่งแก้บั๊กใหญ่ไป 6 จุดในวันเดียว (หลุมดำ Anti-Gravity Smash, ascendancy, GMP ฯลฯ) — เล่นแล้วเจออะไรไม่ตรง บอกมาพร้อมรูป'],
     ['Steady Hand ตัด crit คุ้มไหม', 'คุ้มใน sim: Total Damage 20% MORE แลก crit damage −100% · sim ยังไม่นับ crit จาก gear'],
