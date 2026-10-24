@@ -119,3 +119,21 @@ details p{color:var(--tx2);margin:8px 0 0}
   .sgrid{grid-template-columns:34px repeat(10,minmax(26px,1fr))}
   h1{font-size:23px}
 }
+/* multi-build (2026-10-24) */
+a.logo{color:var(--tx);text-decoration:none}
+.charname{color:var(--tx3);font-weight:600;font-size:.7em}
+.toc .back{margin-top:8px;border-top:1px solid var(--line);padding-top:10px;color:var(--gold)}
+.hubwrap{max-width:1000px;margin:0 auto;padding:24px 16px 60px}
+.bcards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}
+.bcard{display:block;text-decoration:none;color:var(--tx);transition:border-color .15s}
+.bcard:hover{border-color:var(--gold)}
+.bc-top{display:flex;justify-content:space-between;align-items:center}
+.char{font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.5px;text-transform:uppercase}
+.bc-t{font-size:21px;font-weight:800;margin:4px 0 8px}
+.bcard .sub{margin:10px 0 8px;font-size:14px}
+.bc-f{font-size:12px;color:var(--tx3)}
+.clog{padding-left:18px;margin:0}.clog li{margin:6px 0;color:var(--tx2);font-size:14px}.clog b{color:var(--tx)}
+.stash td:first-child{white-space:nowrap}
+.lvb{display:inline-block;background:#3a2f17;color:var(--gold2);border:1px solid var(--gold);border-radius:5px;padding:1px 7px;font-size:12px;font-weight:700}
+.note:not(.warn){background:var(--card2);border:1px solid var(--line);color:var(--tx2)}
+@media (max-width:720px){.bcards{grid-template-columns:minmax(0,1fr)}}

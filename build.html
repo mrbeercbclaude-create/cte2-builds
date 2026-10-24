@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CtE2 Build</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="build">
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="logo" href="./">CtE2 <b>Builds</b></a>
+    <span class="crumb">Craft to Exile 2 · v2.1.4 · ZenixSg</span>
+  </div>
+</header>
+<div class="layout">
+<main id="main"></main>
+<aside class="toc"><div class="card sticky"><div class="toct">สารบัญ</div><div id="tocLinks"></div><a class="back" href="./">← ทุก build</a></div></aside>
+</div>
+<div id="tip" class="tip" hidden></div>
+<script>
+(function () {
+  var b = new URLSearchParams(location.search).get('b') || '';
+  if (!/^[a-z0-9_-]+$/.test(b)) b = 'none';
+  var files = ['tree.js', 'changelog.js', 'builds/' + b + '.data.js', 'builds/' + b + '.content.js', 'app.js'];
+  (function next(i) {
+    if (i >= files.length) return;
+    var s = document.createElement('script'); s.src = files[i];
+    s.onload = s.onerror = function () { next(i + 1); };
+    document.body.appendChild(s);
+  })(0);
+})();
+</script>
+</body>
+</html>

@@ -3,178 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scythe Bleed Gladiator — CtE2</title>
-<meta name="description" content="Craft to Exile 2 build: Scythe Bleed Gladiator (Fighter + Sanguimancer)">
+<title>CtE2 Builds</title>
+<meta name="description" content="Craft to Exile 2 builds ของ Beer บนเซิฟ ZenixSg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="hub">
 <header class="topbar">
   <div class="topbar-in">
-    <span class="logo">CtE2 <b>Builds</b></span>
+    <a class="logo" href="./">CtE2 <b>Builds</b></a>
     <span class="crumb">Craft to Exile 2 · v2.1.4 · ZenixSg</span>
   </div>
 </header>
-
-<div class="layout">
-<main>
-  <section class="hero card">
-    <div class="hero-icon"><img id="heroIcon" alt=""></div>
-    <div class="hero-txt">
-      <div class="tags"><span class="tag red">Bleed</span><span class="tag">Scythe</span><span class="tag">Melee</span><span class="tag">2 มือ</span><span class="tag gold">Gladiator</span></div>
-      <h1>Scythe Bleed Gladiator</h1>
-      <p class="sub">ฟันวงกว้างด้วย Whirlwind ให้ศัตรูติด Bleed ทั้งกลุ่ม · บัฟด้วย Reaper Form + Plague Aura · ใส่ Plate ทั้งชุด</p>
-      <div class="meta">
-        <div><span>คลาส</span><b>Fighter + Sanguimancer</b></div>
-        <div><span>Ascendancy</span><b>Gladiator</b></div>
-        <div><span>จุดเริ่ม Talent</span><b>Warrior</b></div>
-        <div><span>เกราะ</span><b>Plate</b></div>
-      </div>
-    </div>
+<div class="hubwrap">
+  <h1>Build ของแต่ละตัวละคร</h1>
+  <p class="sub">เกมนี้มีระบบ character — 1 บัญชีมีหลายตัว · กระเป๋าใช้ร่วมกัน แต่ของที่สวม · talent · skill · support gem แยกต่อตัว</p>
+  <div id="buildCards" class="bcards"></div>
+  <section class="card">
+    <h2>อัปเดตล่าสุด</h2>
+    <p class="small">NOVA แก้ build ตามที่เล่นจริง — เจออะไรไม่ตรง ส่งรูปมาบอก</p>
+    <ul id="changelog" class="clog"></ul>
   </section>
-
-  <section id="summary" class="card">
-    <h2>สรุปเร็ว</h2>
-    <div class="grid4">
-      <div class="mini"><div class="k">Stat</div><div class="v">STR หลัก</div><div class="d">INT แค่ถึง req ของ scythe · DEX ถ้า energy หมดบ่อย</div></div>
-      <div class="mini"><div class="k">สกิลหลัก</div><div class="v">Whirlwind</div><div class="d">หมุนฟันรอบตัว ติด bleed ทั้งกลุ่ม</div></div>
-      <div class="mini"><div class="k">บัฟ</div><div class="v">Reaper Form</div><div class="d">+Scythe Damage สูงสุด 30% · ตีด้วย scythe ต่อเวลาได้</div></div>
-      <div class="mini"><div class="k">ออร่า</div><div class="v">Plague Aura</div><div class="d">ศัตรูรอบตัวติด ailment ง่ายขึ้น</div></div>
-    </div>
-    <div class="note warn">มือซ้ายใช้ไม่ได้ — scythe เป็นอาวุธ 2 มือ (shield / tome / totem ใส่ไม่ได้)</div>
-  </section>
-
-  <section id="equipment" class="card">
-    <h2>Equipment</h2>
-    <div class="gear">
-      <div class="slot"><div class="sl">อาวุธ</div><div class="sn">Scythe</div><ul><li>ฐาน <b>Rusted Scythe</b> = Bleed Chance 12.5–25% ติดมา ← หาอันนี้</li><li>Reaper's Scythe = spell lifesteal (โอเค)</li><li class="bad">Necromancer's Scythe = ดาเมจ summon (ไม่ใช่สายเรา)</li><li>ดาเมจ x1.4 · ระยะ 4.5 · ฟันกว้าง 150°</li></ul></div>
-      <div class="slot"><div class="sl">หมวก / เสื้อ / กางเกง / รองเท้า</div><div class="sn">Plate</div><ul><li>Armor สูงสุด + HP</li><li>ทางเลือก: Chainmail = Armor + Magic Shield (req STR + INT)</li></ul></div>
-      <div class="slot"><div class="sl">แหวน / สร้อย</div><div class="sn">Bleed / Physical / HP</div><ul><li>หา Bleed Chance, Physical Damage, Ailment Damage, Health</li><li>ใส่ STR ถ้าขาด req</li></ul></div>
-      <div class="slot"><div class="sl">มือซ้าย</div><div class="sn dim">ใช้ไม่ได้</div><ul><li>เควส Blocking: เลือก <b>Shield</b> ไว้ใช้ตอนยังถือดาบมือเดียว</li><li>เควส Suit Up: เลือก <b>Plate Pants</b></li></ul></div>
-    </div>
-    <h3>Stat requirement</h3>
-    <p class="small">สูตรจากโค้ดเกม: <code>ตัวคูณ × (2 + 2 × (เลเวล gear − 1))</code> · เซิฟใช้ ORIGINAL_MODE ตัวคูณรวม 1.0</p>
-    <div class="tablewrap"><table class="tbl">
-      <thead><tr><th>เลเวล gear</th><th>Scythe STR</th><th>Scythe INT</th><th>Plate STR</th></tr></thead>
-      <tbody><tr><td>10</td><td>5</td><td>5</td><td>8</td></tr><tr><td>25</td><td>12</td><td>12</td><td>20</td></tr><tr><td>50</td><td>25</td><td>25</td><td>40</td></tr><tr><td>75</td><td>37</td><td>37</td><td>60</td></tr><tr><td>100</td><td>50</td><td>50</td><td>80</td></tr></tbody>
-    </table></div>
-  </section>
-
-  <section id="stats" class="card">
-    <h2>Stat points <span class="pill">1 แต้ม / เลเวล</span></h2>
-    <div class="statrow">
-      <div class="st str"><b>STR</b><span>ดาเมจ · HP · HP regen · Armor · Crit dmg</span><em>ลงหลัก</em></div>
-      <div class="st int"><b>INT</b><span>Magic dmg · Mana regen · Magic Shield</span><em>แค่ถึง req scythe</em></div>
-      <div class="st dex"><b>DEX</b><span>Attack speed · Energy regen · Dodge · Crit</span><em>ถ้า energy หมดบ่อย</em></div>
-    </div>
-    <ol class="steps"><li>INT ให้ถึง req ของ scythe</li><li>STR ให้ถึง req ของ Plate</li><li>ที่เหลือ STR ทั้งหมด</li></ol>
-  </section>
-
-  <section id="tree" class="card">
-    <h2>Passive Tree (Talents)</h2>
-    <p class="small">แต้ม talent ได้ 1 / เลเวล · เส้นทางคำนวณด้วยกฎต่อเส้นเดียวกับโค้ดเกม · กดแท็บเพื่อดูทีละช่วง · แตะ node เพื่อดูรายละเอียด</p>
-    <div class="tabs" id="phaseTabs"></div>
-    <div class="counter"><span>Talent: <b id="ptCount">0</b></span><span id="phaseDesc"></span></div>
-    <div class="treebox" id="treeBox">
-      <div class="zoom"><button data-z="in" aria-label="ซูมเข้า">+</button><button data-z="out" aria-label="ซูมออก">−</button><button data-z="fit" aria-label="จัดกลาง">◎</button></div>
-      <svg id="treeSvg" xmlns="http://www.w3.org/2000/svg"></svg>
-    </div>
-    <div class="legend"><span><i class="lg alloc"></i>ลงแต้ม</span><span><i class="lg major"></i>Keystone</span><span><i class="lg notable"></i>Notable</span><span><i class="lg small"></i>Small</span></div>
-    <h3>ลำดับลงแต้ม</h3>
-    <div id="orderList" class="order"></div>
-    <h3>❌ ห้ามกด</h3>
-    <ul class="dont">
-      <li><b>Blood Mage</b> — Mana −100%, Energy −100% (energy ใช้ตี) · ทางไป Infection / Siphoner ต้องผ่านตัวนี้ เลยข้ามทั้งคู่</li>
-      <li><b>Elemental Purity</b> — Physical −100%</li>
-      <li><b>Glancing Strikes</b> (ติดจุด Warrior) — สาย block แต่ไม่มีโล่</li>
-      <li><b>Netherite Bastion / Nether Enthusiast</b> — แปลงกายภาพเป็นไฟ</li>
-    </ul>
-  </section>
-
-  <section id="ascendancy" class="card">
-    <h2>Ascendancy — Gladiator <span class="pill">9 แต้มจากเควส</span></h2>
-    <div class="ascwrap">
-      <svg id="ascSvg" xmlns="http://www.w3.org/2000/svg"></svg>
-      <div class="ascinfo">
-        <table class="tbl">
-          <thead><tr><th>แต้ม</th><th>ได้ตอน</th><th>Node</th></tr></thead>
-          <tbody>
-            <tr><td>1–3</td><td>Act II · Defenders of the Nether II</td><td>Gladiator → DEX → <b>Violent Outbursts</b><div class="small">Physical 15% MORE · AoE +15%</div></td></tr>
-            <tr><td>4–5</td><td>Act III · Slippery Swimmer</td><td>DEX → <b>Bloody Blades</b><div class="small">Bleed Chance +30% · Bleed Damage +30%</div></td></tr>
-            <tr><td>6–7</td><td>Act V · They Knew You Were Coming</td><td>DEX → <b>Gratuitous Violence</b><div class="small">50% Blood Explosion · Bleed Damage +30%</div></td></tr>
-            <tr><td>8–9</td><td>Epilogue · บอสธาตุ 4 ตัว</td><td>DEX → <b>Retaliation</b><div class="small">Physical +35% · Physical Leech 3%</div></td></tr>
-          </tbody>
-        </table>
-        <p class="small">แต้ม ascendancy แชร์ทุกตัวละคร · ข้าม Challenger / Parry Veteran / Deflector (สาย charge / block)</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="card">
-    <h2>Skills (คลาส) <span class="pill">ลงได้แค่ 2 คลาส</span></h2>
-    <p class="small">แต้มสกิล 1 / เลเวล · เลเวลที่ปลดล็อก = แถวของสกิลในต้นไม้คลาส (เช็คจากโค้ด) · ตัวเลขในวง = ลำดับที่ควรอัป</p>
-    <div id="schools"></div>
-    <h3>ลำดับอัปสกิล</h3>
-    <div class="tablewrap"><table class="tbl" id="skillPrio"></table></div>
-  </section>
-
-  <section id="gems" class="card">
-    <h2>Gems &amp; Jewels</h2>
-    <h3>Socket gems</h3>
-    <div class="gemgrid">
-      <div class="gem"><div class="gs">อาวุธ</div><b>Garnet</b><span>Damage over Time (bleed)</span><em>หรือ Opal = Physical Damage</em></div>
-      <div class="gem"><div class="gs">เกราะ</div><b>Opal</b><span>Health</span><em>หรือ Garnet = Leech</em></div>
-      <div class="gem"><div class="gs">แหวน / สร้อย</div><b>Garnet</b><span>Ailment Damage</span><em>หรือ Opal = STR ถ้าขาด req</em></div>
-    </div>
-    <h3>Support gems → ต่อกับ Whirlwind</h3>
-    <ol class="chips"><li>Bleed Chance</li><li>Melee Damage</li><li>Physical Damage</li><li>Damage over Time</li><li>Ailment Damage</li><li>AoE / Physical Penetration</li></ol>
-    <h3>Aura gems (ใช้ Spirit)</h3>
-    <ul class="plain"><li><b>Physical Ailment</b> — Physical Damage + Bleed Chance (เลเวล 10+)</li><li><b>Physical Damage</b></li></ul>
-    <h3>Jewels</h3>
-    <ul class="chips"><li>Bleed Chance</li><li>Physical Damage</li><li>Ailment Damage</li><li>STR</li><li>Attack Speed</li><li>Watcher's Eye: Physical Ailment</li></ul>
-  </section>
-
-  <section id="howto" class="card">
-    <h2>วิธีเล่น</h2>
-    <ol class="steps">
-      <li>เปิด <b>Fighter Stance</b> (attack speed + move speed)</li>
-      <li>เปิด <b>Plague Aura</b> ค้างไว้ — ดูดเลือดตัวเองทุก 0.5 วิ หลุดเองถ้าเลือดต่ำกว่า 25%</li>
-      <li>ก่อนเข้ากลุ่มมอน กด <b>Reaper Form</b> (10 วิ · ตีธรรมดาด้วย scythe มีโอกาสต่อเวลา)</li>
-      <li>เข้ากลางกลุ่ม กด <b>Whirlwind</b> ค้าง → ทุกตัวติด bleed</li>
-      <li>บอส: <b>Shred</b> ลด armor ก่อน แล้ว Whirlwind / ตีธรรมดาให้ Reaper Form ต่อเวลา</li>
-      <li>เคลียร์เร็ว: <b>Undying Will</b> — ฆ่าแล้วศัตรูระเบิด + Berserk stack</li>
-    </ol>
-  </section>
-
-  <section id="faq" class="card">
-    <h2>ควรรู้</h2>
-    <details open><summary>รีเซ็ตแต้มได้ไหม</summary><p>ได้ — <b>Minor Reset Potion</b> (Talents / Stat / Skill / Passive / Ascendancy) ให้ 10 respec point แล้วคลิกขวา node เพื่อถอน · <b>Major Reset Potion</b> คืนแต้มทั้งหมดของหมวดนั้น · ทำได้จาก profession recipe</p></details>
-    <details><summary>ตายแล้วเสียอะไร</summary><p>ไม่เสียของ · ตั้งแต่เลเวล 50 เสีย EXP ก้อนใหญ่</p></details>
-    <details><summary>ลงคลาสที่ 3 ได้ไหม</summary><p>ไม่ได้ — เกมขึ้น "You can't spend points in more than 2 classes."</p></details>
-    <details><summary>Infection / Siphoner ทำไมไม่เอา</summary><p>ทางเดียวที่ไปถึงต้องผ่าน Blood Mage ซึ่งลด Mana และ Energy 100%</p></details>
-  </section>
-
-  <footer class="foot">ข้อมูลอ่านจากไฟล์ data ของ Craft to Exile 2 v2.1.4 (Mine and Slash 6.4.13) · ทำให้ Beer · 2026-10-23</footer>
-</main>
-
-<aside class="toc">
-  <div class="card sticky">
-    <div class="toct">สารบัญ</div>
-    <a href="#summary">1. สรุปเร็ว</a>
-    <a href="#equipment">2. Equipment</a>
-    <a href="#stats">3. Stat points</a>
-    <a href="#tree">4. Passive Tree</a>
-    <a href="#ascendancy">5. Ascendancy</a>
-    <a href="#skills">6. Skills</a>
-    <a href="#gems">7. Gems &amp; Jewels</a>
-    <a href="#howto">8. วิธีเล่น</a>
-    <a href="#faq">9. ควรรู้</a>
-  </div>
-</aside>
+  <footer class="foot">ข้อมูลอ่านจากไฟล์ data ของ Craft to Exile 2 v2.1.4 (Mine and Slash 6.4.13) · ทำให้ Beer</footer>
 </div>
 <div id="tip" class="tip" hidden></div>
-<script src="data.js"></script>
+<script src="changelog.js"></script>
+<script src="builds/list.js"></script>
+<script src="builds/summoner.content.js"></script>
+<script src="builds/bleed.content.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
