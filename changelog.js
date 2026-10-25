@@ -1,5 +1,6 @@
 // Newest first. build = character name, or 'ทั้งหมด' for site-wide changes.
 window.CHANGELOG = [
+  { date: '2026-10-26', build: 'Mika', text: 'v1.1 · <b>แก้ build ที่ผิด</b>: เลิก Minstrel → Elementalist คลาสเดียว (Solo Class Bonus 10% MORE + ลดดาเมจ 5% · sim เดิมไม่รู้จัก) · เพิ่ม <b>Mage Circle</b> (Spell Damage 15–30% MORE) + <b>Mage Armor</b> ที่ v1.0 ตกหล่นเพราะ sim คิดแค่สกิลดาเมจ · ลำดับแต้มสำหรับ Mika Lv 33' },
   { date: '2026-10-26', build: 'ยังไม่สร้าง', text: 'สร้าง build <b>Armageddon Elementalist</b> v1.0 (Elementalist + Minstrel · staff) — กดค้างปุ่มเดียว ตีบอส ~507k · ตรวจกลไกในโค้ดแล้ว (Overheat 4 stack = ลูกไฟ ×2 + 40% MORE) · แก้ support: Crit Damage → Greater Conservation · ยังไม่เทสในเกม' },
   { date: '2026-10-25', build: 'ตัวที่ 3', text: 'v1.4 · Valor ขึ้นก่อน March · เตือน Rallying March ร่าย 7 วิ บัฟติด 3 วิหลังร่ายจบ = ใช้ตอนวิ่งระหว่างกลุ่ม ไม่ใช่ตอนตีบอส' },
   { date: '2026-10-25', build: 'ตัวที่ 3', text: 'v1.3 · แก้ลำดับแต้มสกิล: เกมล็อกเลเวลสกิลตามเลเวลตัว (ต้องมากกว่า req + เลเวลสกิล) → Rime Reaver ขึ้น +1 ต่อเลเวล เต็มราว Lv 50 · แต้มที่เหลือลง March → Valor → Grasp' },
