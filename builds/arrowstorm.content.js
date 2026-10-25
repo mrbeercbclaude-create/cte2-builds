@@ -1,5 +1,5 @@
 (window.BUILDS = window.BUILDS || {}).arrowstorm = Object.assign(window.BUILDS.arrowstorm || {}, {
-  char: 'Mika', title: 'Arrow Storm Trickster', version: '1.1', updated: '2026-10-26', status: 'Mika Lv 33 · เทส energy + การโดนแล้ว',
+  char: 'Mika', title: 'Arrow Storm Trickster', version: '1.2', updated: '2026-10-26', status: 'Mika Lv 33 · เทส energy + การโดนแล้ว',
   tags: [['กดค้างปุ่มเดียว', 'gold'], ['energy พอ', 'gold'], ['Physical'], ['Bow'], ['Hunter คลาสเดียว'], ['ยังไม่เทสในเกม', 'red']],
   sub: 'กดค้างแล้ว<b>ลูกธนูตกเป็นฝน</b>ใส่จุดที่เล็ง 5 ดอก/วิ · ใช้ <b>energy</b> จังหวะละ 2.33 (Armageddon ใช้มานา 8) · build นี้จัดทุกอย่าง (tree · support · passive) ให้ <b>energy ที่ฟื้นได้ ≥ ที่ใช้</b> — กดค้างได้ไม่หมด',
   meta: [['คลาส', 'Hunter คลาสเดียว'], ['Ascendancy', 'Trickster'], ['จุดเริ่ม Talent', 'Ranger (The Bow)'], ['อาวุธ', 'Bow']],
@@ -72,14 +72,14 @@
       'หน้าคลาสขึ้น <b>Solo Class Bonus</b> (Hunter อย่างเดียว)',
       'กด Arrow Storm ค้าง 20 วิ (ใส่ Focused Shot + Brutality) → <b>energy ไม่หมด</b> · ถ้าหมด บอกวินาทีมา',
       'ต้องมีลูกธนูในตัวไหม (ถ้าใช้ไม่ได้ตอนไม่มีลูกธนู บอกมา)',
-      'ถือ Totem มือซ้ายพร้อมธนูได้ไหม (โค้ดบล็อกแค่ "อาวุธ" มือซ้าย — ยังไม่แน่ใจกับ totem)',
+      'ถือ Totem มือซ้ายพร้อมธนู — <b>ไม่ได้</b> (เทสแล้ว)',
       'บอส: นับว่าลูกธนูโดนกี่ดอกจาก 5',
     ],
   },
   equipment: {
     slots: [
       ['อาวุธ', 'Bow', ['ดาเมจ Arrow Storm = <b>weapon damage × 2.45</b> ต่อดอก → ธนูดาเมจสูงสุด', 'หา Weapon Damage %, Physical Damage, Armor Penetration'],],
-      ['มือซ้าย', 'Totem (DEX)', ['Dodge + Physical Resist · ยังไม่ได้เช็คว่าถือคู่ธนูได้ (ดู checklist)'],],
+      ['มือซ้าย', 'ใช้ไม่ได้', ['เทสแล้ว: ถือ Totem คู่ธนูไม่ได้ · ธนูเป็นอาวุธ 2 มือ (<code>can_dual_wield = false</code>)'],],
       ['เกราะ', 'Leather (DEX)', ['หา <b>Energy %</b>, Health, DEX, Resistance'],],
       ['แหวน / สร้อย', 'Energy · Phys', ['หา <b>Energy Regen</b>, Physical Damage, DEX, Resistance', '<b>ไม่ต้องหา crit</b> — Steady Hand ตัด crit damage', 'Energy on Hit = leech ติดเพดาน 5%/วิ ไม่คุ้ม'],],
     ],

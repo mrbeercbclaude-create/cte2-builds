@@ -1,5 +1,6 @@
 // Newest first. build = character name, or 'ทั้งหมด' for site-wide changes.
 window.CHANGELOG = [
+  { date: '2026-10-26', build: 'Mika', text: 'Arrow Storm v1.2 · มือซ้ายใช้ไม่ได้ (เทสแล้ว ถือ Totem คู่ธนูไม่ได้)' },
   { date: '2026-10-26', build: 'Mika', text: 'Arrow Storm v1.1 · เทสจริง: energy ไม่หมด 20 วิ · ไม่ต้องใช้ลูกธนู · ลูกธนูโดนมอนขนาดคน 33% · กลาง 69% · ใหญ่ 70% (ตรงกับที่คำนวณ)' },
   { date: '2026-10-26', build: 'Mika', text: 'สร้าง build <b>Arrow Storm Trickster</b> v1.0 (Hunter คลาสเดียว · ธนู) — คิดดาเมจจาก energy ที่ฟื้นทันจริง (sim ใหม่ sustain_tree) · เช็คกลไกในโค้ด: วงระเบิด 1 บล็อก โดนบอส ~60–72% · GMP/LMP/Area Focus ห้าม' },
   { date: '2026-10-26', build: 'Mika', text: 'Armageddon v1.3 · <b>เลิกใช้</b>: เทสจริงมานาหมดใน 2.26 วิ (sim เดิมไม่มีโมเดลมานา)' },
