@@ -1,5 +1,5 @@
 (window.BUILDS = window.BUILDS || {}).arrowstorm = Object.assign(window.BUILDS.arrowstorm || {}, {
-  char: 'Mika', title: 'Arrow Storm Trickster', version: '1.0', updated: '2026-10-26', status: 'Mika Lv 33 · เพิ่งเปลี่ยนมา · ยังไม่เทส',
+  char: 'Mika', title: 'Arrow Storm Trickster', version: '1.1', updated: '2026-10-26', status: 'Mika Lv 33 · เทส energy + การโดนแล้ว',
   tags: [['กดค้างปุ่มเดียว', 'gold'], ['energy พอ', 'gold'], ['Physical'], ['Bow'], ['Hunter คลาสเดียว'], ['ยังไม่เทสในเกม', 'red']],
   sub: 'กดค้างแล้ว<b>ลูกธนูตกเป็นฝน</b>ใส่จุดที่เล็ง 5 ดอก/วิ · ใช้ <b>energy</b> จังหวะละ 2.33 (Armageddon ใช้มานา 8) · build นี้จัดทุกอย่าง (tree · support · passive) ให้ <b>energy ที่ฟื้นได้ ≥ ที่ใช้</b> — กดค้างได้ไม่หมด',
   meta: [['คลาส', 'Hunter คลาสเดียว'], ['Ascendancy', 'Trickster'], ['จุดเริ่ม Talent', 'Ranger (The Bow)'], ['อาวุธ', 'Bow']],
@@ -11,6 +11,7 @@
       ['คลาสที่ 2', 'ไม่ลง', 'Solo Class Bonus 10% MORE + ลดดาเมจ 5%'],
     ],
     notes: [
+      ['', '<b>✅ เทสจริงบน Mika (2026-10-26):</b> กดค้าง Arrow Storm ได้ 20 วิ energy ไม่หมด · ไม่ต้องมีลูกธนูในตัว · ยิงมอนยืนนิ่ง (ตัวนับบนเซิฟ) ลูกธนูโดน: <b>ขนาดคน 33%</b> (33/100) · <b>กลาง 69%</b> (62/90) · <b>ใหญ่ 70%</b> (77/110) — ตรงกับที่คำนวณ (เล็ก ~42% · กลาง ~60–65% · ใหญ่ ~76%) ตัวเล็กต่ำกว่านิดเพราะเล็งไม่ตรงกลางเป๊ะ'],
       ['warn', '<b>ทำไมเปลี่ยนจาก Armageddon:</b> เทสจริงบน Mika — มานาหมดใน 2.26 วิ (กิน ~250/วิ ฟื้น 80/วิ) · sim เดิมไม่มีโมเดลมานาเลย · build นี้คำนวณใหม่ด้วย <code>sustain_tree.py</code>: ดาเมจ = ค่าที่ <b>energy ฟื้นทัน</b> เท่านั้น'],
       ['', 'เช็คในโค้ด/ข้อมูลเกมแล้ว: กดค้าง = 1 จังหวะต่อ 20 tick (เร็วขึ้นตาม Attack Skill Speed แต่ channel ได้แค่ครึ่ง) · จังหวะละ 5 ดอก (ทุก 4 tick) · ลูกธนูตกจาก ~5 บล็อกเหนือจุดเล็ง สุ่มห่าง ±2 บล็อก ระเบิดวง <b>1 บล็อก</b> → โดนบอสขนาดกลาง ~60% (Expanded Area +30% → 72%) · energy regen ไม่โดนลดตอนสู้ · regen ทุก 1 วิ'],
       ['', 'Support ที่เช็คแล้ว: <b>Focused Shot</b> +30% MORE ไม่เสียอะไร (ลูกธนูเป็นบล็อกตก ไม่ใช่ projectile — จำนวน projectile ไม่มีผล แต่แท็ก projectile ทำให้ได้ดาเมจ) · <b>GMP / LMP ห้าม</b> (ได้แต่โดนลดดาเมจ) · <b>Area Focus ห้าม</b> (AoE −30% → โดนบอสเหลือ ~42%)'],
