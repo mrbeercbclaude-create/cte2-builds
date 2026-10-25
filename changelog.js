@@ -1,5 +1,6 @@
 // Newest first. build = character name, or 'ทั้งหมด' for site-wide changes.
 window.CHANGELOG = [
+  { date: '2026-10-26', build: 'ยังไม่สร้าง', text: 'สร้าง build <b>Armageddon Elementalist</b> v1.0 (Elementalist + Minstrel · staff) — กดค้างปุ่มเดียว ตีบอส ~507k · ตรวจกลไกในโค้ดแล้ว (Overheat 4 stack = ลูกไฟ ×2 + 40% MORE) · แก้ support: Crit Damage → Greater Conservation · ยังไม่เทสในเกม' },
   { date: '2026-10-25', build: 'ตัวที่ 3', text: 'v1.4 · Valor ขึ้นก่อน March · เตือน Rallying March ร่าย 7 วิ บัฟติด 3 วิหลังร่ายจบ = ใช้ตอนวิ่งระหว่างกลุ่ม ไม่ใช่ตอนตีบอส' },
   { date: '2026-10-25', build: 'ตัวที่ 3', text: 'v1.3 · แก้ลำดับแต้มสกิล: เกมล็อกเลเวลสกิลตามเลเวลตัว (ต้องมากกว่า req + เลเวลสกิล) → Rime Reaver ขึ้น +1 ต่อเลเวล เต็มราว Lv 50 · แต้มที่เหลือลง March → Valor → Grasp' },
   { date: '2026-10-25', build: 'ตัวที่ 3', text: 'v1.2 · ลำดับอัพแต้มสกิลหลัง Lv 30 (Rime → March → Valor → Grasp → Banner) + ลำดับ passive · สกิลที่อัพเกิน 1 แล้วเปลือง: Glacial Dash · Song of Vigor · Frostbite Thrust หลัง Lv 30 · STR = ครึ่งเลเวล gear' },
