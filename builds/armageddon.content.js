@@ -1,6 +1,6 @@
 (window.BUILDS = window.BUILDS || {}).armageddon = Object.assign(window.BUILDS.armageddon || {}, {
-  char: 'Mika', title: 'Armageddon Elementalist', version: '1.2', updated: '2026-10-26', status: 'Mika Lv 33 · เพิ่งเปลี่ยนมา · ยังไม่เทส',
-  tags: [['กดค้างปุ่มเดียว', 'gold'], ['Fire'], ['Staff'], ['Caster'], ['คลาสเดียว', 'gold'], ['ยังไม่เทสในเกม', 'red']],
+  char: 'เลิกใช้', title: 'Armageddon Elementalist', version: '1.3', updated: '2026-10-26', status: '❌ เลิกใช้ · มานาหมดใน 2.26 วิ (เทสจริงบน Mika)',
+  tags: [['เลิกใช้', 'red'], ['Fire'], ['Staff'], ['Caster']],
   sub: 'กดค้างแล้วอุกกาบาตไฟตกใส่จุดที่เล็ง (ห่างไม่เกิน 10 บล็อก) · ทุกจังหวะ (0.5 วิ) ตก 3 ลูก · มี <b>Overheat 4 stack</b> ตก 6 ลูก + ดาเมจเวท 40% MORE · ยืนใน <b>Mage Circle</b> ได้ Spell Damage อีก 15–30% MORE · เล่น Elementalist <b>คลาสเดียว</b> ได้ Solo Class Bonus 10% MORE',
   meta: [['คลาส', 'Elementalist (Sorcerer) คลาสเดียว'], ['Ascendancy', 'Elementalist'], ['จุดเริ่ม Talent', 'Mage (The Staff)'], ['อาวุธ', 'Staff + Tome']],
   summary: {
@@ -11,6 +11,7 @@
       ['คลาสที่ 2', 'ไม่ลง', 'Solo Class Bonus: Total Damage 10% MORE + Damage Reduction 5%'],
     ],
     notes: [
+      ['warn', '<b>❌ เลิกใช้ (v1.3):</b> เทสจริงบน Mika Lv 33 — กด Armageddon ค้าง มานา 520 หมดใน <b>2.26 วิ</b> · กิน ~250 มานา/วิ แต่ฟื้นแค่ 80/วิ (Overheat 4 stack เหลือ 16) · Mana on Hit เป็น leech ติดเพดาน 5% ของมานาสูงสุด/วิ (~26) ช่วยไม่ได้ · sim ไม่มีโมเดลมานา → ตัวเลขดาเมจในหน้านี้ใช้ได้แค่ยิงเป็นช่วงสั้น · Mika ย้ายไป <a href="build.html?b=arrowstorm"><b>Arrow Storm</b></a>'],
       ['warn', '<b>v1.1 แก้ของ v1.0 ที่ผิด:</b> v1.0 ทำจาก sim ซึ่งคิดแค่สกิลที่ทำดาเมจ → ไม่เห็น <b>Mage Circle</b> / <b>Mage Armor</b> (สกิลบัฟ) และไม่รู้จัก <b>Solo Class Bonus</b> เลยเลือก Minstrel เป็นคลาสที่ 2 ผิด · ตรวจในโค้ดแล้ว: Solo Class Bonus = Total Damage 10% MORE + Damage Reduction 5% เฉพาะตอนลงแต้มสกิล/passive คลาสเดียว (<code>SpellSchoolsData.isSoloClass</code>) · Song of Valor ให้ Total Damage แค่ 8–16% แบบบวก (ไม่ใช่ MORE) ≈ +5% จริง'],
       ['warn', '<b>ยังไม่ได้เล่นจริง</b> · ตัวเลขดาเมจเป็นการประมาณจากไฟล์เกม (Lv 100) · มานาคือความเสี่ยงอันดับ 1 — ทำ checklist ก่อนลงของแพง'],
       ['', 'กลไก Armageddon เช็คในโค้ดแล้ว: กดค้าง = ร่ายซ้ำทุก 10 tick (ลดตาม cast speed) เสียมานาทุกจังหวะ · ทุกจังหวะปล่อยลูกไฟ 3 ลูก ณ จุดที่เล็ง (เส้นเล็งชนแค่บล็อก ไกลสุด 10 บล็อก) · ลูกไฟสุ่มตกห่างจุดเล็ง ±2 บล็อก ระเบิดวง 2 บล็อก → บอสที่ยืนนิ่งโดนทุกลูก · Overheat 4 stack = ลูกไฟ ×2 · แต่ละ stack: ดาเมจเวท +10% MORE แต่ Mana Regen + Leech −20% MORE · Armageddon ไม่ได้ให้ stack เอง · สกิลน้ำแข็ง/Refresh ลบ stack'],

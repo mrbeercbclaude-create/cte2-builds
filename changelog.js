@@ -1,5 +1,7 @@
 // Newest first. build = character name, or 'ทั้งหมด' for site-wide changes.
 window.CHANGELOG = [
+  { date: '2026-10-26', build: 'Mika', text: 'สร้าง build <b>Arrow Storm Trickster</b> v1.0 (Hunter คลาสเดียว · ธนู) — คิดดาเมจจาก energy ที่ฟื้นทันจริง (sim ใหม่ sustain_tree) · เช็คกลไกในโค้ด: วงระเบิด 1 บล็อก โดนบอส ~60–72% · GMP/LMP/Area Focus ห้าม' },
+  { date: '2026-10-26', build: 'Mika', text: 'Armageddon v1.3 · <b>เลิกใช้</b>: เทสจริงมานาหมดใน 2.26 วิ (sim เดิมไม่มีโมเดลมานา)' },
   { date: '2026-10-26', build: 'Mika', text: 'v1.2 · แก้: staff ไม่ใช่อาวุธ 2 มือ (เขียนผิดตามหน้า spear) → มือซ้ายใส่ <b>Tome</b> ได้' },
   { date: '2026-10-26', build: 'Mika', text: 'v1.1 · <b>แก้ build ที่ผิด</b>: เลิก Minstrel → Elementalist คลาสเดียว (Solo Class Bonus 10% MORE + ลดดาเมจ 5% · sim เดิมไม่รู้จัก) · เพิ่ม <b>Mage Circle</b> (Spell Damage 15–30% MORE) + <b>Mage Armor</b> ที่ v1.0 ตกหล่นเพราะ sim คิดแค่สกิลดาเมจ · ลำดับแต้มสำหรับ Mika Lv 33' },
   { date: '2026-10-26', build: 'ยังไม่สร้าง', text: 'สร้าง build <b>Armageddon Elementalist</b> v1.0 (Elementalist + Minstrel · staff) — กดค้างปุ่มเดียว ตีบอส ~507k · ตรวจกลไกในโค้ดแล้ว (Overheat 4 stack = ลูกไฟ ×2 + 40% MORE) · แก้ support: Crit Damage → Greater Conservation · ยังไม่เทสในเกม' },
