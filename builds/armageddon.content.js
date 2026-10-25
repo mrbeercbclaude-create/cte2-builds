@@ -1,8 +1,8 @@
 (window.BUILDS = window.BUILDS || {}).armageddon = Object.assign(window.BUILDS.armageddon || {}, {
-  char: 'Mika', title: 'Armageddon Elementalist', version: '1.1', updated: '2026-10-26', status: 'Mika Lv 33 · เพิ่งเปลี่ยนมา · ยังไม่เทส',
+  char: 'Mika', title: 'Armageddon Elementalist', version: '1.2', updated: '2026-10-26', status: 'Mika Lv 33 · เพิ่งเปลี่ยนมา · ยังไม่เทส',
   tags: [['กดค้างปุ่มเดียว', 'gold'], ['Fire'], ['Staff'], ['Caster'], ['คลาสเดียว', 'gold'], ['ยังไม่เทสในเกม', 'red']],
   sub: 'กดค้างแล้วอุกกาบาตไฟตกใส่จุดที่เล็ง (ห่างไม่เกิน 10 บล็อก) · ทุกจังหวะ (0.5 วิ) ตก 3 ลูก · มี <b>Overheat 4 stack</b> ตก 6 ลูก + ดาเมจเวท 40% MORE · ยืนใน <b>Mage Circle</b> ได้ Spell Damage อีก 15–30% MORE · เล่น Elementalist <b>คลาสเดียว</b> ได้ Solo Class Bonus 10% MORE',
-  meta: [['คลาส', 'Elementalist (Sorcerer) คลาสเดียว'], ['Ascendancy', 'Elementalist'], ['จุดเริ่ม Talent', 'Mage (The Staff)'], ['อาวุธ', 'Staff (2 มือ)']],
+  meta: [['คลาส', 'Elementalist (Sorcerer) คลาสเดียว'], ['Ascendancy', 'Elementalist'], ['จุดเริ่ม Talent', 'Mage (The Staff)'], ['อาวุธ', 'Staff + Tome']],
   summary: {
     minis: [
       ['สกิลหลัก', 'Armageddon', 'req Lv 30 · channel (กดค้าง) · ไม่มี cooldown'],
@@ -85,10 +85,10 @@
   },
   equipment: {
     slots: [
-      ['อาวุธ', 'Staff (2 มือ)', ['ดาเมจ Armageddon = <b>weapon damage × 1.24</b> + ค่าตามเลเวล → staff ดาเมจสูงสุดที่ใส่ได้', 'หา Fire Damage, Spell Damage, Cast Speed, Mana %'],],
+      ['อาวุธ', 'Staff (มือเดียว)', ['ดาเมจ Armageddon = <b>weapon damage × 1.24</b> + ค่าตามเลเวล → staff ดาเมจสูงสุดที่ใส่ได้', 'หา Fire Damage, Spell Damage, Cast Speed, Mana %'],],
       ['เกราะ', 'Cloth (INT)', ['หา <b>Mana %</b>, <b>Mana Regen</b>, Health, Fire / Elemental Resistance'],],
       ['แหวน / สร้อย', 'Fire · Mana', ['หา Fire Damage, Elemental Damage, Mana Regen, Cast Speed, Resistance', '<b>ไม่ต้องหา crit</b> — Steady Hand ตัด crit damage ทิ้ง', '<b>Leech ไม่คุ้ม</b> — Overheat ตัด leech −80%'],],
-      ['มือซ้าย', 'ใช้ไม่ได้', ['staff เป็นอาวุธ 2 มือ']],
+      ['มือซ้าย', 'Tome (INT)', ['staff <b>ไม่ใช่</b>อาวุธ 2 มือ (ข้อมูลเกม: staff ไม่มีแท็ก two_handed · spear มี) → ถือมือซ้ายได้', '<b>Tome</b> = Magic Shield + Physical Resist · req INT เหมือน staff · หา Mana / Spell Damage / Resistance', 'Totem of Undying (ของ vanilla) ถือได้เหมือนกัน แต่ไม่ให้ stat']],
     ],
   },
   stats: {
